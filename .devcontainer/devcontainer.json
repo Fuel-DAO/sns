@@ -1,0 +1,31 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "RobbOwen.synthwave-vscode",
+        "tamasfe.even-better-toml",
+        "mhutchie.git-graph",
+        "bierner.github-markdown-preview",
+        "ms-vscode.hexeditor",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-checkbox",
+        "bierner.markdown-emoji",
+        "bierner.markdown-footnotes",
+        "bierner.markdown-preview-github-styles",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-yaml-preamble",
+        "marp-team.marp-vscode",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  },
+  "features": {},
+  "postCreateCommand": {},
+  "postStartCommand": {}
+}
