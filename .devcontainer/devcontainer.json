@@ -27,7 +27,7 @@
   },
   "features": {},
   "postCreateCommand": {
-    "installDFXAndSourcePostInstallation": "DFXVM_INIT_YES=true sh -ci \"$(curl -fsSL https://internetcomputer.org/install.sh)\" && source \"$HOME/.local/share/dfx/env\""
+    "installDFXAndInitializeWithSNSIdentity": "chmod +x .devcontainer/script/dfx.sh && .devcontainer/script/dfx.sh"
   },
   "postStartCommand": {}
 }
