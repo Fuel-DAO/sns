@@ -75,10 +75,34 @@ NnsProposal:
     url: "https://forum.dfinity.org"
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
-    summary: >
-        Proposal to create an SNS for the project XX.
-        The SNS will be initialized with the following neurons:
-        ...
+    summary: |
+        # FuelDAO Proposal for SNS
+        Proposal to create an SNS DAO for the project FuelDAO.
+        ## Token Distribution
+        The total supply of FUEL Tokens at the time of the SNS Decentralization Sale is 1 Billion tokens.
+        * 25% is allocated to the decentralization sale (250,000,000 tokens)
+        * 15% is allocated to the founding team (150,000,000 tokens)
+        * 60% is allocated to the treasury (600,000,000 tokens)
+        ## Governance
+        The governance model includes staking, voting, and other relevant details.
+        The ledger transaction fee is 0.001 EST.
+        The minimum amount of SNS tokens to stake a neuron is 5.
+        The minimum dissolve delay for a neuron to cast votes on proposals is 3 months and the maximum dissolve delay is 4 years.
+        ## Decentralization Sale
+        * Minimum number of participants: 50
+        * Minimum ICP raised through direct participation: 1 ICP
+        * Maximum ICP raised through direct participation: 250,000 ICP
+        * Minimum Contribution raised through direct participation: 1 ICP
+        * Maximum Contribution raised through direct participation: 100,000 ICP
+        * Neuron Fund Participation: Yes
+        ## The Dapp
+        The following canisters on EstateDAO will be governed by SNS post the SNS swap:
+        * Frontend DApp - 67erj-tiaaa-aaaam-acnxa-cai
+        * Backend (Asset) DApp - 6kdae-saaaa-aaaam-acnuq-cai
+        * Backend (Asset_Proxy) DApp - 6ncgq-7yaaa-aaaam-acnua-cai
+        * Backend (Provision) DApp - 7amc6-qqaaa-aaaam-acntq-cai
+        ## Verification
+        All information about the project can be verified in the [Whitepaper](https://fueldao.notion.site/FuelDAO-Whitepaper-8a43f3b69c04433fbc4499d25fd6aa28?pvs=25) and on [Github](https://github.com/Estate-DAO).
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
@@ -88,7 +112,7 @@ fallback_controller_principals:
     # principals of your intended fallback controllers.
     #
     # For testing, propose_sns.sh will fill this in automatically.
-    - YOUR_PRINCIPAL_ID
+    - 5ptmx-dtkmo-ujaoi-yzezh-7cii2-7gx4h-6ub6a-4ooka-2hxri-o6ve3-tqe
 
 # The list of dapp canister(s) that will be decentralized if the
 # decentralization swap succeeds. These are defined in the form of canister IDs,
@@ -102,7 +126,10 @@ dapp_canisters:
     # IDs of the canisters comprising your to-be-decentralized dapp.
     #
     # For testing, propose_sns.sh will fill this in automatically.
-    - YOUR_CANISTER_ID
+    - 67erj-tiaaa-aaaam-acnxa-cai #Frontend DApp
+    - 6kdae-saaaa-aaaam-acnuq-cai #Backend (Asset) DApp
+    - 6ncgq-7yaaa-aaaam-acnua-cai #Backend (Asset_Proxy) DApp
+    - 7amc6-qqaaa-aaaam-acntq-cai #Backend (Provision) DApp
 
 # Configuration of SNS tokens in the SNS Ledger canister deployed as part
 # of the SNS.
