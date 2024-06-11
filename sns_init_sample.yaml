@@ -102,7 +102,7 @@ NnsProposal:
         * Backend (Asset_Proxy) DApp - 6ncgq-7yaaa-aaaam-acnua-cai
         * Backend (Provision) DApp - 7amc6-qqaaa-aaaam-acntq-cai
         ## Verification
-        All information about the project can be verified in the [Whitepaper](https://fueldao.notion.site/FuelDAO-Whitepaper-8a43f3b69c04433fbc4499d25fd6aa28?pvs=25) and on [Github](https://github.com/Estate-DAO).
+        All information about the project can be verified in the [Whitepaper](https://fueldao.notion.site/FuelDAO-Whitepaper-8a43f3b69c04433fbc4499d25fd6aa28?pvs=25) and on [Github](https://github.com/Fuel-DAO).
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
