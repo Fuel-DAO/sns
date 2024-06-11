@@ -72,7 +72,7 @@ NnsProposal:
 
     # The HTTPS address of additional content required to evaluate the NNS
     # proposal.
-    url: "https://forum.dfinity.org"
+    url: "https://forum.dfinity.org/t/upcoming-fueldao-sns-decentralization-sale/31481"
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
     summary: |
@@ -85,7 +85,7 @@ NnsProposal:
         * 60% is allocated to the treasury (600,000,000 tokens)
         ## Governance
         The governance model includes staking, voting, and other relevant details.
-        The ledger transaction fee is 0.001 EST.
+        The ledger transaction fee is 0.001 FUEL.
         The minimum amount of SNS tokens to stake a neuron is 5.
         The minimum dissolve delay for a neuron to cast votes on proposals is 3 months and the maximum dissolve delay is 4 years.
         ## Decentralization Sale
@@ -295,13 +295,13 @@ Voting:
     RewardRate:
         # The initial reward rate at which the SNS voting rewards will increase
         # per year. This field is specified as a percentage. For example: "15%".
-        initial: 3%
+        initial: 5%
 
         # The final reward rate at which the SNS voting rewards will increase
         # per year. This rate is reached after `transition_duration` and remains
         # at this level unless changed by an SNS proposal. This field is
         # specified as a percentage. For example: "5%".
-        final: 3%
+        final: 2%
 
         # The voting reward rate falls quadratically from `initial` to `final`
         # over the time period defined by `transition_duration`.
@@ -554,7 +554,7 @@ Swap:
         - ML # Mali
         - MZ # Mozambique
         - MM # Myanmar
-        - NF # North Korea
+        - KP # North Korea
         - SD # Sudan
         - SS # South Sudan
         - SY # Syria
