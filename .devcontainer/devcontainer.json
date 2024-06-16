@@ -6,28 +6,19 @@
     "vscode": {
       "extensions": [
         "esbenp.prettier-vscode",
-        "ms-azuretools.vscode-docker",
-        "RobbOwen.synthwave-vscode",
-        "tamasfe.even-better-toml",
+        "mechatroner.rainbow-csv",
         "mhutchie.git-graph",
-        "bierner.github-markdown-preview",
-        "ms-vscode.hexeditor",
+        "ms-azuretools.vscode-docker",
         "oderwat.indent-rainbow",
-        "yzhang.markdown-all-in-one",
-        "bierner.markdown-checkbox",
-        "bierner.markdown-emoji",
-        "bierner.markdown-footnotes",
-        "bierner.markdown-preview-github-styles",
-        "bierner.markdown-mermaid",
-        "bierner.markdown-yaml-preamble",
-        "marp-team.marp-vscode",
-        "mechatroner.rainbow-csv"
+        "RobbOwen.synthwave-vscode",
+        "tamasfe.even-better-toml"
       ]
     }
   },
   "features": {},
   "postCreateCommand": {
-    "installDFXAndInitializeWithSNSIdentity": "chmod +x .devcontainer/script/dfx.sh && .devcontainer/script/dfx.sh"
+    "installDFXAndInitializeWithSNSIdentity": "chmod +x .devcontainer/script/dfx.sh && .devcontainer/script/dfx.sh",
+    "downloadQuillAndSetupAsExecutable": "chmod +x .devcontainer/script/quill.sh && .devcontainer/script/quill.sh"
   },
   "postStartCommand": {}
 }
