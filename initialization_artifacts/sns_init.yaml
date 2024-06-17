@@ -53,6 +53,9 @@ name: FuelDAO
 description: >
     An electric car tokenization and leasing platform on Internet Computer, enabling users to invest in self-driving electric vehicles. 
     
+# This is currently a placeholder field and must be left empty for now.
+Principals: []
+
 # Path to the SNS Project logo on the local filesystem. The path is relative
 # to the configuration file's location, unless an absolute path is given.
 # Must have less than 341,334 bytes. The only supported format is PNG.
