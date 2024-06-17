@@ -5,3 +5,4 @@ echo "$FUEL_DAO_SNS_CONTROLLER_ADMIN_PRIVATE_KEY" > ~/identity.pem
 dfx identity import fuel_dao_sns ~/identity.pem --storage-mode plaintext
 rm ~/identity.pem
 dfx identity use fuel_dao_sns
+dfx extension install sns
