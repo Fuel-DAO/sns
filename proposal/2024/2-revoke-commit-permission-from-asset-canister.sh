@@ -1,0 +1,1 @@
+dfx canister call 67erj-tiaaa-aaaam-acnxa-cai revoke_permission '(record {of_principal = principal "5ptmx-dtkmo-ujaoi-yzezh-7cii2-7gx4h-6ub6a-4ooka-2hxri-o6ve3-tqe"; permission = variant { Commit };})' --network ic
