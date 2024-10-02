@@ -6,10 +6,8 @@
     "vscode": {
       "extensions": [
         "esbenp.prettier-vscode",
-        "jnoortheen.nix-ide",
         "mechatroner.rainbow-csv",
         "mhutchie.git-graph",
-        "mkhl.direnv",
         "ms-azuretools.vscode-docker",
         "oderwat.indent-rainbow",
         "RobbOwen.synthwave-vscode",
@@ -17,11 +15,7 @@
       ]
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/nix:1": {
-      "packages": "direnv,nil"
-    }
-  },
+  "features": {},
   "postCreateCommand": {
     "installDFXAndInitializeWithSNSIdentity": "chmod +x .devcontainer/script/dfx.sh && .devcontainer/script/dfx.sh",
     "downloadQuillAndSetupAsExecutable": "chmod +x .devcontainer/script/quill.sh && .devcontainer/script/quill.sh"
