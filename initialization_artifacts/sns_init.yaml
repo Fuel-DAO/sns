@@ -46,12 +46,12 @@
 
 # Name of the SNS project. This may differ from the name of the associated
 # token. Must be a string of max length = 255.
-name: FuelDAO
+name: FuelEV
 
 # Description of the SNS project.
 # Must be a string of max length = 2,000.
 description: >
-    An electric car tokenization and leasing platform on Internet Computer, enabling users to invest in self-driving electric vehicles. 
+    An electric car tokenization and leasing platform on Internet Computer, enabling users to invest in and rent self-driving electric vehicles.
     
 # This is currently a placeholder field and must be left empty for now.
 Principals: []
