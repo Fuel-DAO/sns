@@ -107,7 +107,10 @@ NnsProposal:
         * Frontend DApp (Car Rental Booking) - hmh62-uiaaa-aaaai-actxq-cai
         * Backend DApp (Car Rental Booking) - ewirk-vqaaa-aaaaj-qa57q-cai
         ## Verification
-        All information about the project can be verified in the [Whitepaper](https://www.notion.so/fueldao/FuelEV-Whitepaper-155aa15ad3e580dbb485c667b1f96a36) and on [Github](https://github.com/Fuel-DAO/fuel-dao-backend), [Github](https://github.com/Fuel-DAO/fuel-ev-ai) and [Github](https://github.com/Fuel-DAO/fuel-ev-in).
+        All information about the project can be verified in the [Whitepaper](https://www.notion.so/fueldao/FuelEV-Whitepaper-155aa15ad3e580dbb485c667b1f96a36) and our Github repositories-
+        * [FuelEV Backend](https://github.com/Fuel-DAO/fuel-dao-backend)
+        * [Car Tokenization Frontend](https://github.com/Fuel-DAO/fuel-ev-ai)
+        * [Car Rental Booking Frontend](https://github.com/Fuel-DAO/fuel-ev-in)
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
