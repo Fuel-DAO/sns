@@ -51,7 +51,7 @@ name: FuelEV
 # Description of the SNS project.
 # Must be a string of max length = 2,000.
 description: >
-    An electric car tokenization and leasing platform on Internet Computer, enabling users to invest in and rent self-driving electric vehicles.
+    An electric car tokenization and rental platform on Internet Computer, enabling users to invest in and rent premium electric vehicles.
     
 # This is currently a placeholder field and must be left empty for now.
 Principals: []
@@ -75,12 +75,12 @@ NnsProposal:
 
     # The HTTPS address of additional content required to evaluate the NNS
     # proposal.
-    url: "https://forum.dfinity.org/t/upcoming-fueldao-sns-decentralization-sale/31481"
+    url: "https://forum.dfinity.org/t/upcoming-fuelev-sns-decentralization-sale/38837"
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
     summary: |
-        # FuelDAO Proposal for SNS
-        Proposal to create an SNS DAO for the project FuelDAO.
+        # FuelEV Proposal for SNS
+        Proposal to create an SNS DAO for the project FuelEV.
         ## Token Distribution
         The total supply of FUEL Tokens at the time of the SNS Decentralization Sale is 1 Billion tokens.
         * 25% is allocated to the decentralization sale (250,000,000 tokens)
@@ -93,19 +93,21 @@ NnsProposal:
         The minimum dissolve delay for a neuron to cast votes on proposals is 3 months and the maximum dissolve delay is 4 years.
         ## Decentralization Sale
         * Minimum number of participants: 50
-        * Minimum ICP raised through direct participation: 1 ICP
-        * Maximum ICP raised through direct participation: 250,000 ICP
+        * Minimum ICP raised through direct participation: 40,000 ICP
+        * Maximum ICP raised through direct participation: 200,000 ICP
         * Minimum Contribution raised through direct participation: 1 ICP
         * Maximum Contribution raised through direct participation: 100,000 ICP
         * Neuron Fund Participation: Yes
         ## The Dapp
-        The following canisters on EstateDAO will be governed by SNS post the SNS swap:
-        * Frontend DApp - 67erj-tiaaa-aaaam-acnxa-cai
-        * Backend (Asset) DApp - 6kdae-saaaa-aaaam-acnuq-cai
-        * Backend (Asset_Proxy) DApp - 6ncgq-7yaaa-aaaam-acnua-cai
-        * Backend (Provision) DApp - 7amc6-qqaaa-aaaam-acntq-cai
+        The following canisters on FuelEV will be governed by SNS post the SNS swap:
+        * Frontend DApp (Car Tokenization) - tms2j-daaaa-aaaai-q3nta-cai
+        * Backend (Asset) DApp - 4sc7j-7iaaa-aaaaj-qnfva-cai
+        * Backend (Asset_Proxy) DApp - 43buv-jaaaa-aaaaj-qnfuq-cai
+        * Backend (Provision) DApp - 44asb-eyaaa-aaaaj-qnfua-cai
+        * Frontend DApp (Car Rental Booking) - hmh62-uiaaa-aaaai-actxq-cai
+        * Backend DApp (Car Rental Booking) - ewirk-vqaaa-aaaaj-qa57q-cai
         ## Verification
-        All information about the project can be verified in the [Whitepaper](https://fueldao.notion.site/FuelDAO-Whitepaper-8a43f3b69c04433fbc4499d25fd6aa28?pvs=25) and on [Github](https://github.com/Fuel-DAO).
+        All information about the project can be verified in the [Whitepaper](https://www.notion.so/fueldao/FuelEV-Whitepaper-155aa15ad3e580dbb485c667b1f96a36) and on [Github](https://github.com/Fuel-DAO/fuel-dao-backend), [Github](https://github.com/Fuel-DAO/fuel-ev-ai) and [Github](https://github.com/Fuel-DAO/fuel-ev-in).
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
@@ -129,10 +131,12 @@ dapp_canisters:
     # IDs of the canisters comprising your to-be-decentralized dapp.
     #
     # For testing, propose_sns.sh will fill this in automatically.
-    - 67erj-tiaaa-aaaam-acnxa-cai #Frontend DApp
-    - 6kdae-saaaa-aaaam-acnuq-cai #Backend (Asset) DApp
-    - 6ncgq-7yaaa-aaaam-acnua-cai #Backend (Asset_Proxy) DApp
-    - 7amc6-qqaaa-aaaam-acntq-cai #Backend (Provision) DApp
+    - tms2j-daaaa-aaaai-q3nta-cai #Frontend DApp (Car Tokenization)
+    - 4sc7j-7iaaa-aaaaj-qnfva-cai #Backend (Asset) DApp
+    - 43buv-jaaaa-aaaaj-qnfuq-cai #Backend (Asset_Proxy) DApp
+    - 44asb-eyaaa-aaaaj-qnfua-cai #Backend (Provision) DApp
+    - hmh62-uiaaa-aaaai-actxq-cai #Frontend DApp (Car Rental Booking)
+    - ewirk-vqaaa-aaaaj-qa57q-cai #Backend DApp (Car Rental Booking)
 
 # Configuration of SNS tokens in the SNS Ledger canister deployed as part
 # of the SNS.
