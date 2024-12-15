@@ -45,16 +45,14 @@
 # ------------------------------------------------------------------------------
 
 # Name of the SNS project. This may differ from the name of the associated
-# token. Must be a string of max length = 255.
+# token. Must be a string of at most 255 bytes.
 name: FuelEV
 
 # Description of the SNS project.
-# Must be a string of max length = 2,000.
+# Must be a string of at most 2,000 bytes.
 description: >
     An electric car tokenization and rental platform on Internet Computer, enabling users to invest in and rent premium electric vehicles.
     
-# This is currently a placeholder field and must be left empty for now.
-Principals: []
 
 # Path to the SNS Project logo on the local filesystem. The path is relative
 # to the configuration file's location, unless an absolute path is given.
@@ -63,8 +61,8 @@ Principals: []
 # cropped to a circle.
 logo: logo.png
 
-# URL to the dapp controlled by the SNS project.
-# Must be a string from 10 to 512 bytes.
+# URL that represents the SNS, usually a dapp controlled by the SNS project.
+# Must be a string from 10 to 512 bytes, and the domain must be HTTPS.
 url: https://fuelev.ai/
 
 # Metadata for the NNS proposal required to create the SNS. This data will be
@@ -73,8 +71,11 @@ NnsProposal:
     # The title of the NNS proposal. Must be a string of 4 to 256 bytes.
     title: "NNS Proposal to create an SNS named 'FuelEV'"
 
-    # The HTTPS address of additional content required to evaluate the NNS
+    # The HTTPS address of a forum post with additional context required to evaluate the NNS
     # proposal.
+    # This will go in the `url` field of the proposal.
+    # Must be a string of 10 to 2,048 bytes.
+    # The protocol must be HTTPS, and the domain must be forum.dfinity.org.
     url: "https://forum.dfinity.org/t/upcoming-fuelev-sns-decentralization-sale/38837"
 
     # The description of the proposal. Must be a string of 10 to 2,000 bytes.
@@ -111,6 +112,7 @@ NnsProposal:
         * [FuelEV Backend](https://github.com/Fuel-DAO/fuel-dao-backend)
         * [Car Tokenization Frontend](https://github.com/Fuel-DAO/fuel-ev-ai)
         * [Car Rental Booking Frontend](https://github.com/Fuel-DAO/fuel-ev-in)
+        * [Car Rental Booking Offchain](https://github.com/Fuel-DAO/fuel-dao-offchain-backend)
 
 # If the SNS launch attempt fails, control over the dapp canister(s) is given to
 # these principals. In most use cases, this is chosen to be the original set of
@@ -191,7 +193,7 @@ Proposals:
     # this value.
     #
     # For more information, please refer to
-    # https://wiki.internetcomputer.org/wiki/Network_Nervous_System#Proposal_decision_and_wait-for-quiet
+    # https://wiki.internetcomputer.org/wiki/NNS_Canisters#Proposal_decision_and_wait-for-quiet
     #
     # This field is specified as a duration. For example: "1 day".
     maximum_wait_for_quiet_deadline_extension: 1 day
@@ -355,7 +357,6 @@ Distribution:
         # principals of your intended genesis neurons.
         #
         # For testing, propose_sns.sh will fill this in automatically.
-
         # Dev Team Neurons - Founder 1
         - principal: 45uha-nnefe-yiih4-lcjg5-q3mm6-c2xsg-7xwxi-v37db-oliaz-qmovh-eqe
           stake: 6_250_000 tokens
@@ -481,7 +482,6 @@ Distribution:
           memo: 7
           dissolve_delay: 3 months
           vesting_period: 48 months
-          
     # The initial SNS token balances of the various canisters of the SNS.
     InitialBalances:
         # The initial SNS token balance of the SNS Governance canister is known
@@ -497,9 +497,9 @@ Distribution:
 
     # Checksum of the total number of tokens distributed in this section.
     # This field is specified as a token. For instance, "1 token".
-    #    150 million    (dev team)
-    #    600 million    (governance)
-    # +  250 million    (swap)
+    #          1_000    (neuron)
+    #      2 million    (governance)
+    # + 500 thousand    (swap)
     # --------------
     total: 1_000_000_000 tokens
 
@@ -532,7 +532,7 @@ Swap:
     # The minimum amount of ICP that each participant must contribute
     # to participate. This field is specified as a token. For instance,
     # "1 token".
-    minimum_participant_icp: 1 tokens
+    minimum_participant_icp:    1 tokens
 
     # The maximum amount of ICP that each participant may contribute
     # to participate. This field is specified as a token. For instance,
@@ -578,8 +578,12 @@ Swap:
     VestingSchedule:
         # The number of events in the vesting schedule. This translates to how
         # many neurons will be in each participant's neuron basket. Note that
-        # the first neuron in each neuron basket will have zero dissolve delay.
-        # This value should thus be greater than or equal to `2`.
+        # the first neuron in each neuron basket will have zero dissolve delay;
+        # the 2nd will have dissolve delay `interval`; if present, the 3rd will
+        # have dissolve delay `interval` × 2, etc.
+        #
+        # This value must be greater than or equal to `2`
+        # and must not exceed `10`.
         events: 5
 
         # The interval at which the schedule will be increased per event. The
@@ -619,7 +623,7 @@ Swap:
     #   the CreateServiceNervousSystem proposal is executed. This facilitates
     #   testing in an accelerated manner.
     #
-    # start_time: 12:00 UTC  # Intentionally commented out for testing.
+    # start_time: 23:30 UTC  # Intentionally commented out for testing.
 
     # The duration of the decentralization swap. When `start_time` is calculated
     # during CreateServiceNervousSystem proposal execution, this `duration` will
