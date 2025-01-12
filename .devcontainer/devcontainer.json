@@ -15,7 +15,11 @@
       ]
     }
   },
-  "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "postCreateCommand": {
     "installDFXAndInitializeWithSNSIdentity": "chmod +x .devcontainer/script/dfx.sh && .devcontainer/script/dfx.sh",
     "downloadQuillAndSetupAsExecutable": "chmod +x .devcontainer/script/quill.sh && .devcontainer/script/quill.sh"
