@@ -559,20 +559,20 @@ Swap:
         - AQ # Antarctica
         - BF # Burkina Faso
         - CD # Democratic Republic of Congo
-	    - CF # Central African Republic
+	- CF # Central African Republic
         - CU # Cuba
-	    - ET # Ethiopia
+	- ET # Ethiopia
         - IR # Iran
         - IQ # Iraq
-	    - LB # Lebanon
-	    - LY # Libya
+	- LB # Lebanon
+	- LY # Libya
         - ML # Mali
         - MZ # Mozambique
         - MM # Myanmar
-	    - NI # Nicaragua
+	- NI # Nicaragua
         - KP # North Korea
         - SD # Sudan
-	    - SO # Somalia
+	- SO # Somalia
         - SS # South Sudan
         - SY # Syria
         - VE # Venezuela
