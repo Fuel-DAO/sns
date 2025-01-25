@@ -7,16 +7,17 @@ dfx identity use "${IDENTITY_NAME}"
   neuron-stake \
   --pem-file "${PEM_FILE}" \
   --amount 10 \
-  --name primary > ./proposal/2024/3-stake-icp-for-proposal.json
+  --name primary > ./proposal/2025/3-stake-icp-for-proposal.json
 
-./quill send --yes ./proposal/2024/3-stake-icp-for-proposal.json
+./quill send --yes ./proposal/2025/3-stake-icp-for-proposal.json
 
-# 14199361421955379993
+# primary - 14199361421955379993
+# 2 - 6757559962687622496
 
 # ./quill \
 #   neuron-manage \
 #   --pem-file "${PEM_FILE}" \
 #   --disburse \
-#   14199361421955379993 > ./proposal/2024/3-stake-icp-for-proposal.json
+#   14199361421955379993 > ./proposal/2025/3-stake-icp-for-proposal.json
 
-# ./quill send --yes ./proposal/2024/3-stake-icp-for-proposal.json
+# ./quill send --yes ./proposal/2025/3-stake-icp-for-proposal.json
